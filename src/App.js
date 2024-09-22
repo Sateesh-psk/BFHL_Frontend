@@ -15,7 +15,7 @@ const App = () => {
     try {
       const parsedData = JSON.parse(jsonInput);
       if (!parsedData.data) throw new Error("Invalid JSON format");
-      const result = await axios.post("http://localhost:5000/bfhl", parsedData);
+      const result = await axios.post("https://bfhl-0can.onrender.com/bfhl", parsedData);
       setResponse(result.data);
       setError("");
     } catch (err) {
